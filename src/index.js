@@ -8,13 +8,13 @@ const themeSwitch = document.querySelector('.theme-switch__toggle');
 //   DARK: 'dark-theme',
 // };
 
-function createMenuCardsMarkup(menu) {
-    return menu.map(menuCardTemplate).join('');
-}
+// function createMenuCardsMarkup(menu) {
+//     return menu.map(menuCardTemplate).join('');
+// }
+// const cardMarkup = createMenuCardsMarkup(menu);
 
-
-const cardMarkup = createMenuCardsMarkup(menu);
-menuContainer.insertAdjacentHTML('beforeend', cardMarkup);
+const cardMarkup = menuCardTemplate(menu);
+ menuContainer.insertAdjacentHTML('beforeend', cardMarkup);
 
 
 document.addEventListener('DOMContentLoaded', setTheme);
