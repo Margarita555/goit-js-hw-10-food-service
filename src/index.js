@@ -8,28 +8,29 @@ const cardMarkup = menuCardTemplate(menu);
  menuContainer.insertAdjacentHTML('beforeend', cardMarkup);
 
 
-document.addEventListener('DOMContentLoaded', setTheme);
-function setTheme() {
-    let theme = localStorage.getItem('theme');
-    if(theme == 'dark'){
-        document.body.classList.add('dark-theme');
-        themeSwitch.checked = true;
-    }if(theme == 'light'){
-        document.body.classList.add('light-theme');
-    }
-}
+// document.addEventListener('DOMContentLoaded', setTheme);
+// function setTheme() {
+//     let theme = localStorage.getItem('theme');
+//     if(theme == 'dark'){
+//         document.body.classList.add('dark-theme');
+//         themeSwitch.checked = true;
+//     }if(theme == 'light'){
+//         document.body.classList.add('light-theme');
+//     }
+// }
+
 themeSwitch.addEventListener('change', onThemeSwitchChange);
 function onThemeSwitchChange() {
-
-    if(document.body.classList.contains('light-theme')){
-        document.body.classList.replace('light-theme', 'dark-theme');
-        localStorage.setItem('theme', 'dark');
-       return;
-    } if (document.body.classList.contains('dark-theme')) {
-        document.body.classList.replace('dark-theme', 'light-theme');
-        localStorage.setItem('theme', 'light');
-        return; 
-    }
+     document.body.classList.add('dark-theme');
+    // if(document.body.classList.contains('light-theme')){
+    //     document.body.classList.replace('light-theme', 'dark-theme');
+    //     localStorage.setItem('theme', 'dark');
+    //    return;
+    // } if (document.body.classList.contains('dark-theme')) {
+    //     document.body.classList.replace('dark-theme', 'light-theme');
+    //     localStorage.setItem('theme', 'light');
+    //     return; 
+    // }
 }
 
 // themeSwitch.addEventListener('change', onThemeSwitchChange);
