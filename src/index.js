@@ -18,7 +18,6 @@ function setTheme() {
         document.body.classList.add('light-theme');
     }
 }
-
 themeSwitch.addEventListener('change', onThemeSwitchChange);
 function onThemeSwitchChange() {
 
@@ -32,6 +31,20 @@ function onThemeSwitchChange() {
         return; 
     }
 }
+
+// themeSwitch.addEventListener('change', onThemeSwitchChange);
+// function onThemeSwitchChange() {
+
+//     if(document.body.classList.contains('light-theme')){
+//         document.body.classList.replace('light-theme', 'dark-theme');
+//         localStorage.setItem('theme', 'dark');
+//        return;
+//     } if (document.body.classList.contains('dark-theme')) {
+//         document.body.classList.replace('dark-theme', 'light-theme');
+//         localStorage.setItem('theme', 'light');
+//         return; 
+//     }
+// }
 
 // Добавь функционал изменения темы при нажатии (событие change) на чекбокс #theme-switch-toggle в тулбаре.
 // По умолчанию тема светлая.
